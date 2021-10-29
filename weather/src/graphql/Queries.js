@@ -1,9 +1,9 @@
-import {Gql} from '@apollo/client'
+import {gql} from '@apollo/client'
 
 
-export const  GETING_THEWEATHER_QUERY = Gql`
-query getCityByName(name= String!) {
-    getCityByName(name:$name){
+export const  GETING_THEWEATHER_QUERY = gql`
+ query getCityByName($name: String!) {
+     getCityByName(name: $name){
         name 
         country
         weather {
